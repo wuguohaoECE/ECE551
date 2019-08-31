@@ -1,10 +1,6 @@
-Grading at 08/31/2019:12:21:44.116729
-For commit ID 55cd05a76b5cc085aefd7fff7c86374359c214c2
-Grading at Sat Aug 31 08:21:44 EDT 2019
-I expected to find a file called 'answer.txt' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-answers.txt
-README
+Grading at 08/31/2019:12:28:04.219492
+For commit ID fe1dff916e8f539eb690253cd19df8d9efa6089a
+Grading at Sat Aug 31 08:28:04 EDT 2019
+Your file matched the expected output
 
-Overall Grade: FAILED
+Overall Grade: PASSED
