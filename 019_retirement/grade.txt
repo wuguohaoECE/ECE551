@@ -1,0 +1,29 @@
+Grading at 09/07/2019:13:57:15.940316
+For commit ID 186b72ad785b6c1d821eaeae221d70a9e7ad4160
+Grading at Sat Sep  7 09:57:15 EDT 2019
+Attempting to compile retirement.c
+Checking for struct _retire_info
+Found on line 4, column 1 
+Checking for field int months
+Found on line 5, column 3 
+Checking for field double contribution
+Found on line 6, column 3 
+Checking for field double rate_of_return
+Found on line 7, column 3 
+Checking for typedef of struct _retire_info to retire_info
+Found on line 16, column 1 
+Checking for void retirement (int startAge, double initial,  retire_info working,  retire_info retired)
+Found on line 35, column 1 
+Checking for int main(void)
+Found on line 40, column 1 
+Trying to run retirement calculator..
+Your file matched the expected output
+Removing your main() and replacing it with our own to run more tests...
+temp2.c: In function ‘_old_removed_main_’:
+temp2.c:50:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Could not replace your main function to test further
+
+Overall Grade: C
