@@ -46,13 +46,13 @@ rectangle intersection(rectangle r1, rectangle r2) {
   int y1=min(r1.y+r1.height,r2.y+r2.height);
   int width;
   int height;
-  if(x1>x&&y1>y){
-    width=x1-x;
-    height=y1-y;
-  }
-  else{
+  if(x>x1||y>y1){
     width=0;
     height=0;
+  }
+  else{
+    height=y1-y;
+    width=x1-x;
   };
   r1.x=x;
   r1.y=y;
@@ -155,7 +155,6 @@ int main (void) {
   printRectangle(i);
 
   i = intersection(r3,r4);
-  printf("%d %d %d %d",i.x,i.y,i.width,i.height);
   printf("intersection(r3,r4): ");
   printRectangle(i);
 
