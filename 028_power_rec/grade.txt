@@ -1,0 +1,11 @@
+Grading at 09/12/2019:06:42:40.970253
+For commit ID eb8d262858a2827be4406d9f62e316db72a385b6
+Grading at Thu Sep 12 02:42:40 EDT 2019
+Attempting to compile power.c
+power.c: In function ‘power’:
+power.c:10:3: error: expected declaration or statement at end of input
+   }
+   ^
+The code did not compile!
+
+Overall Grade: F
