@@ -1,11 +1,47 @@
-Grading at 09/12/2019:06:42:40.970253
-For commit ID eb8d262858a2827be4406d9f62e316db72a385b6
-Grading at Thu Sep 12 02:42:40 EDT 2019
+Grading at 09/12/2019:06:43:51.453598
+For commit ID b6f5b0d76f4ebc16c16b355f8205c89bb8322c0b
+Grading at Thu Sep 12 02:43:51 EDT 2019
 Attempting to compile power.c
-power.c: In function ‘power’:
-power.c:10:3: error: expected declaration or statement at end of input
-   }
-   ^
-The code did not compile!
+Attempting to compile power.o with our main
+Checking for unsigned power (unsigned x, unsigned y)
+Found on line 4, column 1 
+Checking for no iteration (do, while, for)
+Checking that power is recursive
+0^0 was Correct
+0^1 was Correct
+0^2 was Correct
+0^6 was Correct
+0^8 was Correct
+0^11 was Correct
+1^0 was Correct
+1^1 was Correct
+1^2 was Correct
+1^6 was Correct
+1^8 was Correct
+1^11 was Correct
+4^0 was Correct
+4^1 was Correct
+4^2 was Correct
+4^6 was Correct
+4^8 was Correct
+4^11 was Correct
+5^0 was Correct
+5^1 was Correct
+5^2 was Correct
+5^6 was Correct
+5^8 was Correct
+5^11 was Correct
+9^0 was Correct
+9^1 was Correct
+9^2 was Correct
+9^6 was Correct
+9^8 was Correct
+9^11 was Correct
+12^0 was Correct
+12^1 was Correct
+12^2 was Correct
+12^6 was Correct
+12^8 was Correct
+12^11 was Correct
 
-Overall Grade: F
+Overall Grade: A
