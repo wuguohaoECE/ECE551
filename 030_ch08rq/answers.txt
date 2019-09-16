@@ -1,11 +1,11 @@
 d
 b
-b
+a
+c
 c
 b
-b
 c
-b
+c
 f
 b
 d
@@ -14,4 +14,4 @@ f
 c
 b
 c
-a
+d
