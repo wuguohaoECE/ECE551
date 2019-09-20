@@ -3,6 +3,24 @@
 #include <string.h>
 
 void reverse(char * str) {
+  char * p=str;
+  int i = 0;
+  while(*p!='\0'){
+    i++;
+    p++;
+  }
+  char cop[i+1];
+  cop[i]='\0';
+  p--;
+  //printf("%c\n",*p);
+  for(int j=0;j<i;j++){
+    cop[j]=*p;
+    p--;
+  }
+  //printf("%s\n",cop);
+  for(int j=0;j<i;j++){
+    str[j]=cop[j];
+  }
   //WRITE ME!
 }
 
