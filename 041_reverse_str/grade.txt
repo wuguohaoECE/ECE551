@@ -1,22 +1,13 @@
-Grading at 09/20/2019:16:11:15.802252
-For commit ID b79de0c306ba95b32a7c8652fe8310ea4bc08270
-Grading at Fri Sep 20 12:11:15 EDT 2019
+Grading at 09/20/2019:16:21:45.966364
+For commit ID 7017339464ff347138d95bc5fd81f88da562c3ec
+Grading at Fri Sep 20 12:21:45 EDT 2019
 Attempting to compile  reverse.c
-Your file matched the expected output
-Your output matched what we expected
-Removing your main() and replacing it with our own to run more tests...
-#################################################
-testcase2:
- - Your program segfaulted.
-your code failed the testcase
-#################################################
-testcase3:
-Your file matched the expected output
-#################################################
-testcase4:
-Your file matched the expected output
-#################################################
-testcase5:
-Your file matched the expected output
+reverse.c: In function ‘reverse’:
+reverse.c:6:12: error: ‘NUll’ undeclared (first use in this function); did you mean ‘NULL’?
+   if(*str!=NUll){
+            ^~~~
+            NULL
+reverse.c:6:12: note: each undeclared identifier is reported only once for each function it appears in
+The code did not compile!
 
-Overall Grade: C
+Overall Grade: F
