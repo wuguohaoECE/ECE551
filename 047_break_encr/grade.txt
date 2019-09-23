@@ -1,7 +1,17 @@
-Grading at 09/23/2019:17:18:33.609912
-For commit ID a65914bc12f86ee326afc1cbd0cde09f26b52bcf
-Grading at Mon Sep 23 13:18:33 EDT 2019
+Grading at 09/23/2019:17:28:37.314359
+For commit ID 5e8901ba3b93529259499cfbad7148b419f48cb4
+Grading at Mon Sep 23 13:28:33 EDT 2019
 Attempting to compile breaker.c 
-The code did not compile!
+make: 'breaker' is up to date.
+testcase1 passed
+#################################################
+testcase2:
+testcase2 passed
+#################################################
+testcase3:
+testcase3 passed
+#################################################
+testcase4:
+testcase4 passed
 
-Overall Grade: F
+Overall Grade: A
