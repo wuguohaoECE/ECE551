@@ -1,0 +1,23 @@
+Grading at 09/24/2019:15:15:51.439702
+For commit ID f1713d1d5f60d2c04c19869a29ea07ec90a5d1ab
+Grading at Tue Sep 24 11:15:47 EDT 2019
+Attempting to compile rotateMatrix.c
+testcase1 passed
+#################################################
+testcase2:
+testcase2 passed
+#################################################
+testcase3:
+valgrind reported memory errors
+#################################################
+testcase4:
+testcase4 failed, your program didn't indicate this is a failure case
+#################################################
+testcase5:
+testcase5 failed, your program didn't indicate this is a failure case
+#################################################
+testcase6:
+Your file matched the expected output
+testcase6 passed
+
+Overall Grade: F
