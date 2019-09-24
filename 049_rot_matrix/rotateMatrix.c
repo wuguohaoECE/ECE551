@@ -36,6 +36,10 @@ int main(int argc, char ** argv){
     p+=12;
     count++;
   }
+  if(count < 10){
+    fprintf(stderr,"plz input a 10*10 matrix\n");
+    return EXIT_FAILURE;
+  }
   char rotated_matrix[10][12];
   rotate_matrix(rotated_matrix[0], pre_matrix[0], 12);
   //printf("\n");
