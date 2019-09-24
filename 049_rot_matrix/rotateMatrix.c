@@ -30,7 +30,7 @@ int main(int argc, char ** argv){
     //printf("%d\n",strchr(p,'\n')-p);
     //printf("count = %d\n",count);
     if(((strchr(p,'\n')-p != 10) & (count <=8)) | (count >= 10) ){
-      printf("plz input a 10*10 matrix\n");
+      fprintf(stderr,"plz input a 10*10 matrix\n");
       return EXIT_FAILURE;
     }
     p+=12;
