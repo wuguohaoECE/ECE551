@@ -18,8 +18,9 @@ int main(int argc, char ** argv){
     return EXIT_FAILURE;
   }
   FILE * f = fopen(argv[1], "r");
+  FILE * g = fopen("log.txt","w");
   if(f == NULL){
-    perror("could not open file");
+    perror("a.a.a.could not open file");
     return EXIT_FAILURE;
   }
   char pre_matrix[10][12];
@@ -31,6 +32,7 @@ int main(int argc, char ** argv){
     //printf("count = %d\n",count);
     if(((strchr(p,'\n')-p != 10) & (count <=8)) | (count >= 10) ){
       fprintf(stderr,"plz input a 10*10 matrix\n");
+      fprintf(g, "something special happened");
       return EXIT_FAILURE;
     }
     p+=12;
