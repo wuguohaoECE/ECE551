@@ -20,5 +20,6 @@ int main(void) {
   free(p);
   p = q;
   q = NULL;
+  free(p);
   return EXIT_SUCCESS;
 }
