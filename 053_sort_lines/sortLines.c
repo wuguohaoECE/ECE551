@@ -44,12 +44,21 @@ void print_char(char ** array, size_t strings_size){
 int main(int argc, char ** argv) {
   size_t strings_size = 0;
   char ** array;
+  FILE * f;
   if(argc==1){
+    f = stdin;
+    if( f == NULL ){
+        perror("The error was");
+	return EXIT_FAILURE;
+    }
     array = read_file(stdin, &strings_size);
     print_char(array, strings_size);
+    if(fclose(f) != 0) {
+      perror("Failed to close");
+      return EXIT_FAILURE;
+    }
   }
-  if(argc>1){
-    FILE * f;
+  else if(argc>1){
     for(int i = 1; i < argc; i++){
       strings_size = 0;
       f = fopen(argv[i], "r");
@@ -59,8 +68,11 @@ int main(int argc, char ** argv) {
       }
       array = read_file(f, &strings_size);
       print_char(array, strings_size);
+      if(fclose(f) != 0) {
+      perror("Failed to close");
+      return EXIT_FAILURE;
+      }
     }
-    fclose(f);
   }
   return EXIT_SUCCESS;
 }
