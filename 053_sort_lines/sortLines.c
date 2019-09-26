@@ -37,6 +37,7 @@ void print_char(char ** array, size_t strings_size){
       printf("%s", array[j]);
       free(array[j]);
     }
+  free( array[strings_size] );
   free(array);
 }
 
@@ -59,6 +60,7 @@ int main(int argc, char ** argv) {
       array = read_file(f, &strings_size);
       print_char(array, strings_size);
     }
+    fclose(f);
   }
   return EXIT_SUCCESS;
 }
