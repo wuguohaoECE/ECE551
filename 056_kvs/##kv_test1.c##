@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "kv.h"
+
+int main(void){
+  FILE * f = fopen("test.txt", "r");
+  char_t ans = read_file(f);
+  for(int i = 0; i < ans->len; i++){
+    printf("%s\n", ans->s[i]);
+  }
+  return EXIT_SUCCESS;
+}

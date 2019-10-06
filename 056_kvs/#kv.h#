@@ -11,7 +11,7 @@ struct _kvpair_t {
 typedef struct _kvpair_t kvpair_t;
 
 struct _kvarray_t {
-  kvpair_t * kvarr;
+  kvpair_t ** kvarr;
   size_t len;
   //DEFINE ME!
 };
@@ -22,6 +22,7 @@ typedef struct {
   size_t len;
 }char_t;
   
+
 
 kvarray_t * readKVs(const char * fname);
 
