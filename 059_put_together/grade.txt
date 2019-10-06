@@ -1,0 +1,27 @@
+Grading at 10/06/2019:15:02:02.952710
+For commit ID 6c9783ca59cf9483368ba8d72e67d6fbc419ab4f
+Grading at Sun Oct  6 11:02:02 EDT 2019
+Attempting to compile:
+rm -f  outname.o  counts.o  main.o  kv.o count_values *~
+gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 outname.c
+gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 counts.c
+gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 main.c
+In file included from main.c:4:0:
+kv.h:25:28: error: unknown type name ‘x’
+ char_t read_file(FILE * f);x
+                            ^
+kv.h:27:11: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+ kvarray_t * readKVs(const char * fname);
+           ^
+main.c: In function ‘main’:
+main.c:50:20: error: implicit declaration of function ‘readKVs’; did you mean ‘freeKVs’? [-Werror=implicit-function-declaration]
+   kvarray_t * kv = readKVs(argv[1]);
+                    ^~~~~~~
+                    freeKVs
+main.c:50:20: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Makefile:10: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+The code did not compile! Please try git add . to push all files in your working directory 
+
+Overall Grade: F
