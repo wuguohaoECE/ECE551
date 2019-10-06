@@ -44,7 +44,7 @@ int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
  //read the key/value pairs from the file named by argv[1] (call the result kv)
   if( argc<3 ){
-    printf("plz put files");
+    perror("error:");
     return EXIT_FAILURE;
   }
   kvarray_t * kv = readKVs(argv[1]);
