@@ -1,12 +1,16 @@
 #ifndef __COUNTS_H__
 #define __COUNTS_H__
 struct _one_count_t {
+  const char * chr;
+  int n;
   //DEFINE ME
 
 };
 typedef struct _one_count_t one_count_t;
 
 struct _counts_t {
+  one_count_t * carr;
+  size_t len;
   //DEFINE ME
 };
 typedef struct _counts_t counts_t;
