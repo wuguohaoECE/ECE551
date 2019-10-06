@@ -22,7 +22,7 @@ typedef struct {
   size_t len;
 }char_t;
   
-char_t read_file(FILE * f);x
+char_t read_file(FILE * f);
 
 kvarray_t * readKVs(const char * fname);
 
