@@ -10,7 +10,7 @@ counts_t * createCounts(void) {
 }
 void addCount(counts_t * c, const char * name) {
   if(name == NULL){
-    addCount(c, "<unKnown> ");
+    addCount(c, "<unknown> ");
     return;
   }
   for(int i = 0; i < c->len; i++){
@@ -37,7 +37,7 @@ void printCounts(counts_t * c, FILE * outFile) {
   int sign = 0;
   int id;
   for(int i = 0; i < c->len; i++){
-    if( strcmp(c->carr[i].chr,"<unKnown> ") == 0 ){
+    if( strcmp(c->carr[i].chr,"<unknown> ") == 0 ){
       sign = 1;
       id = i;
       continue;
