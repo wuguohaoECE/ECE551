@@ -1,0 +1,31 @@
+#include<cmath>
+
+class Circle{
+ private:
+  Point center;
+  const double radius;
+ public:
+ Circle(Point p, double r) : center(p), radius(r){};
+  void move (double dx, double dy){
+    center.move(dx, dy);
+  }
+  double intersectionArea(const Circle & otherCircle){
+    double d = center.distanceFrom(otherCircle.center);
+    if(d >= radius + otherCircle.radius){
+      return 0;
+    }
+    if(radius > otherCircle.radius){
+      double tmp = radius;
+      radius = otherCircle.radius;
+      otherCircle.radius = tmp;
+    }
+    if(otherCircle.radius - radius >= d){
+      return pi*otherCircle.radius*radius;
+    }
+    double r1 = otherCircle.radius;
+    double r2 = radius;
+    double ang1=acos((r1*r1+d*d-r2*r2)/(2*r1*d));
+    double ang2=acos((r2*r2+d*d-r1*r1)/(2*r2*d));
+    return ang1*r1*r1 + ang2*r2*r2 - r1*d*sin(ang1);
+  }
+};
