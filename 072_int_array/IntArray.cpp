@@ -6,7 +6,7 @@ IntArray::IntArray(): data(NULL), numElements(0) {}
 IntArray::IntArray(int n): data(new int[n]), numElements(n) {}
 
 IntArray::IntArray(const IntArray & rhs): data(new int[rhs.numElements]), numElements(rhs.numElements){
-  for(int i = 1; i < numElements; i++){
+  for(int i = 0; i < numElements; i++){
     data[i] = rhs.data[i];
   }
 }
@@ -16,13 +16,13 @@ IntArray::~IntArray() {
 
 IntArray & IntArray::operator=(const IntArray & rhs) {
   if(this != &rhs){
-    int * temp = new int[rhs.numElements];
-    for(int i = 0; i < rhs.numElements; i++){
+    int * temp = new int[rhs.size()];
+    for(int i = 0; i < rhs.size(); i++){
       temp[i] = rhs.data[i];
     }
     delete[] data;
     data = temp;
-    numElements = rhs.numElements;
+    numElements = rhs.size();
   }
   return *this;
 }
@@ -42,7 +42,7 @@ bool IntArray::operator==(const IntArray & rhs) const {
     return false;
   }
   for(int i = 0; i < numElements; i++){
-    if(data[i] != rhs.data[i]){
+    if(data[i] != rhs[i]){
       return false;
     }
   }
