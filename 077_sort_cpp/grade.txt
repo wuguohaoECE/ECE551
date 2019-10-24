@@ -1,6 +1,6 @@
-Grading at 10/24/2019:16:54:08.287317
-For commit ID cd4d8a658a1a583af166353eca3e2ab7e042a030
-Grading at Thu Oct 24 12:54:08 EDT 2019
+Grading at 10/24/2019:16:58:59.076802
+For commit ID 87db38d699da2a27932f191ce05549eee8a6ce0c
+Grading at Thu Oct 24 12:58:58 EDT 2019
 Looking for malloc in your files
 No uses found (good).
 Looking for free in your files
@@ -14,6 +14,7 @@ No uses found (good).
 Looking for printf in your files
 No uses found (good).
 Attempting to compile with make
-The code did not compile!
+g++ -o sortLInes -Wall -Werror -std=gnu++98 sortLines.cpp
+I couldnt find an executable!
 
 Overall Grade: F
