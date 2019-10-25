@@ -1,0 +1,50 @@
+Grading at 10/25/2019:02:21:12.143044
+For commit ID c171a195e7cf07a8ce7f3d128c1ccbab36026268
+Grading at Thu Oct 24 22:21:02 EDT 2019
+-----------------------------------------------
+testcase 1 : Testing with Matrix<int>
+...compiling...
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
+-----------------------------------------------
+testcase 2 : Testing with Matrix<std::string>
+...compiling...
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
+-----------------------------------------------
+testcase 3 : Testing with Matrix<(a custom class we wrote)>
+...compiling...
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
+--------------------------------------------
+Preparing to test assert fails...
+Compiling assertion failure tester...
+Compiled.
+-----------------------------------------------
+testcase 4 :  operator[]: row number too high
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+-----------------------------------------------
+testcase 5 :  operator[]: row number too low
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+-----------------------------------------------
+testcase 6 :  operator+: different number of rows
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+-----------------------------------------------
+testcase 7 :  operator+: different number of columns
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+
+Overall Grade: A
