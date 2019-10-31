@@ -21,10 +21,7 @@ class Matrix {
   nR(0),
     nC(0),
     rows(NULL){}
- Matrix(int r, int c):
-  nR(r),
-    nC(c),
-    rows(new vector<T> *[r]){
+ Matrix(int r, int c): nR(r), nC(c), rows(new vector<T> * [r]){
     for(int i = 0; i < r; i++){
       rows[i] = new vector<T>(c);
     }
@@ -90,7 +87,7 @@ class Matrix {
   }
 
   //+operator
-  Matrix operator+(const Matrix & rhs) const {
+  Matrix & operator+(const Matrix & rhs) const {
     assert(nR == rhs.nR && nC == rhs.nC);
     Matrix ans(nR, nC);
     ans.nR = nR;
@@ -98,6 +95,21 @@ class Matrix {
     for (int i = 0; i < nR; i++) {
       for (int j = 0; j < nC; j++) {
         ans[i][j] = (*this)[i][j] + rhs[i][j];
+      }
+    }
+    return ans;
+  }
+  
+  Matrix &  Matrix::operator*(const Matrix & rhs) const {
+    if(nC != rhs.nR) {
+      throw MyException();
+    }
+    Matrix ans(nR, rhs.nC);
+    for (int i = 0; i < ans.nR; i++) {
+      for (int j = 0; j < ans.nC; j++) {
+	for (int k = 0; k < nC; k++) {
+	  ans[i][j] += (*this)[i][k] * rhs[k][j];
+	}
       }
     }
     return ans;
