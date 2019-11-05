@@ -171,9 +171,14 @@ void testList(void) {
   assert(list12.head->prev == NULL);
   assert(list12.tail->prev == NULL);
   // testcase12
-  list1 = list10;
-
-
+  //list1 = list10;
+  
+  IntList l9;
+  l9.addFront(1);
+  l9.addFront(2);
+  IntList l10;
+  l10.addFront(1);
+  l10 = l9;
 
 }
 
