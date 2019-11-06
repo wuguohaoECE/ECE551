@@ -55,7 +55,12 @@ class LinkedList {
       return current != rhs.current;
     }
   
-    const const_iterator & operator++() {
+    //can not add const at front here
+    //since const_iterator will change in the future
+    //however, there is no error if add const
+    //since return a const to a non-const variable
+    //it is still non-const
+    const_iterator & operator++() {
       current = current->next;
       return *this;
     }
