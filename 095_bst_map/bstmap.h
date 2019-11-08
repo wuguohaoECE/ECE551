@@ -139,24 +139,18 @@ template<typename K, typename V>
     //left once, and to the top right
     Node * final1 = *curr;
     Node * final2 = (*curr)->left;
-    while( (final2->left != NULL) || (final2->right != NULL) ) {
-      final1 = final2;
-      if(final2->right != NULL) {
-	final2 = final2->right;
-      }
-      else {
-	final2 = final2->left;
-      }
-    }
-    // free eage between final1 and final2
-    if(final1->left == final2) {
-      final1->left = NULL;
+    if(final2->right == NULL) {
+      final2->right = final1->right;
     }
     else {
-      final1->right = NULL;
+      while(final2->right != NULL) {
+	final1 = final2;
+	final2 = final2->right;
+      }
+      final1->right = final2->left;
+      final2->left = (*curr)->left;
+      final2->right = (*curr)->right;
     }
-    final2->left = (*curr)->left;
-    final2->right = (*curr)->right;
     delete *curr;
     *curr = final2;
   }
