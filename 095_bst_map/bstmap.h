@@ -21,10 +21,40 @@ template<typename K, typename V>
 
  public:
  BstMap():root(NULL) {}
+  //copy assignment
+ BstMap(const BstMap & rhs): root(NULL) {
+    deepcopy(rhs.root);
+  }
+  BstMap & operator=(const BstMap & rhs) {
+    destroy(root);
+    deepcopy(rhs.root);
+    return *this;
+  }
+  void print(const Node * curr) {
+    if(curr != NULL) {
+      cout << "key: " << curr->key << "value: " << curr->value << endl;
+      print(curr->left);
+      print(curr->right);
+    }
+  }
+
  virtual ~BstMap(){
     destroy(root);
     root = NULL;
   }
+  void deepcopy(const Node * curr) {
+    if(curr != NULL) {
+      add(curr->key, curr->value);
+      deepcopy(curr->left);
+      deepcopy(curr->right);
+    }
+  }
+ Node * getroot() const {
+   return root;
+ }
+ Node * getroot() {
+   return root;
+ }
   void destroy(Node * curr) {
     if (curr != NULL) {
       destroy(curr->left);
