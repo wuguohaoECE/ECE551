@@ -33,7 +33,7 @@ int main(void) {
   cout << m1.lookup(4) << endl;
   cout << m1.lookup(1) << endl;
   cout << m1.lookup(7) << endl;
-  //cout << m1.lookup(2) << endl;
+  // cout << m1.lookup(2) << endl;
   cout << m1.lookup(9) << endl;
   cout << m1.lookup(-1) << endl;
   cout << m1.lookup(88) << endl;
