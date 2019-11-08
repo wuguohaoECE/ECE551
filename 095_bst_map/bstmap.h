@@ -27,6 +27,7 @@ template<typename K, typename V>
   }
   BstMap & operator=(const BstMap & rhs) {
     destroy(root);
+    root = NULL;
     deepcopy(rhs.root);
     return *this;
   }

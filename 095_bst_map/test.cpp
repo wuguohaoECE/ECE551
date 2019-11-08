@@ -14,18 +14,24 @@ int main(void) {
   m3.print(m3.getroot());
   m1.print(m1.getroot());
   
-  m2.print(m2.getroot());
+  //m2.print(m2.getroot());
   m1.add(7,2);
   cout << m1.lookup(5) << endl;
-  m1.remove(1);
+  m1.remove(5);
+  //m3 = m1;
+  BstMap<int,int> m4(m1);
+  cout << "after removed\n";
+  m1.print(m1.getroot());
+  m4.print(m4.getroot());
+  m3.print(m3.getroot());
   //cout << m1.lookup(6) << endl;
   
-  cout << m1.lookup(5) << endl;
+  //cout << m1.lookup(5) << endl;
   
   cout << m1.lookup(12) << endl;
   
   cout << m1.lookup(4) << endl;
-  cout << m1.lookup(10);
+  cout << m1.lookup(10) << endl;
 
   //cout << m1.lookup(7);
   
