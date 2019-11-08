@@ -18,13 +18,14 @@ int main(void) {
   m1.add(7,2);
   cout << m1.lookup(5) << endl;
   m1.remove(5);
-  //m3 = m1;
+  m1.add(6,6);
+  m3 = m1;
   BstMap<int,int> m4(m1);
   cout << "after removed\n";
   m1.print(m1.getroot());
   m4.print(m4.getroot());
   m3.print(m3.getroot());
-  //cout << m1.lookup(6) << endl;
+  cout << m1.lookup(6) << endl;
   
   //cout << m1.lookup(5) << endl;
   

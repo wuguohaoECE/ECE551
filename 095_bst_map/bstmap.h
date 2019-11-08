@@ -99,7 +99,7 @@ template<typename K, typename V>
 	  return curr->value;
 	}
       }
-      throw invalid_argument("no this key");
+      throw invalid_argument("");
     }
     catch (const invalid_argument & e) {
       throw;
