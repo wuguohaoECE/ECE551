@@ -1,6 +1,6 @@
-Grading at 11/11/2019:16:45:23.260687
-For commit ID 45db845010d52724571b2364e77ef18791788492
-Grading at Mon Nov 11 11:45:07 EST 2019
+Grading at 11/11/2019:16:53:09.496549
+For commit ID 43a9c185ba1a80f84a0a79d1e123491436e3ef77
+Grading at Mon Nov 11 11:52:53 EST 2019
 Running make
 g++ -o dedup -Wall -Werror -std=gnu++11 -pedantic dedup.cpp
 Found executable dedup
@@ -13,139 +13,139 @@ Expected first line to be #!/bin/bash [ignoring]
 Expected: # but found /var/dedup/d000/x/y
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file118
-Expected: # but found /var/dedup/d000/x/file35
+Expected: # but found /var/dedup/d000/x/file35).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file43
-Expected: # but found /var/dedup/d000/x/file35
+Expected: # but found /var/dedup/d000/x/file35).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file44
-Expected: # but found /var/dedup/d000/x/y/file21
+Expected: # but found /var/dedup/d000/x/y/file21).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file181
-Expected: # but found /var/dedup/d000/x/y/file23
+Expected: # but found /var/dedup/d000/x/y/file23).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file30
-Expected: # but found /var/dedup/d000/x/file19
+Expected: # but found /var/dedup/d000/x/file19).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file214
-Expected: # but found /var/dedup/d000/x/y/file3
+Expected: # but found /var/dedup/d000/x/y/file3).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file107
-Expected: # but found /var/dedup/d000/x/y/file46
+Expected: # but found /var/dedup/d000/x/y/file46).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file243
-Expected: # but found /var/dedup/d000/x/file22
+Expected: # but found /var/dedup/d000/x/file22).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file276
-Expected: # but found /var/dedup/d000/x/y/file20
+Expected: # but found /var/dedup/d000/x/y/file20).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file22
-Expected: # but found /var/dedup/d000/x/y/file9
+Expected: # but found /var/dedup/d000/x/y/file9).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file17
-Expected: # but found /var/dedup/d000/x/file21
+Expected: # but found /var/dedup/d000/x/file21).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file6
-Expected: # but found /var/dedup/d000/x/y/file39
+Expected: # but found /var/dedup/d000/x/y/file39).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file87
-Expected: # but found /var/dedup/d000/x/file3
+Expected: # but found /var/dedup/d000/x/file3).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/file34
-Expected: # but found /var/dedup/d000/x/file28
+Expected: # but found /var/dedup/d000/x/file28).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file237
-Expected: # but found /var/dedup/d000/x/file27
+Expected: # but found /var/dedup/d000/x/file27).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file274
-Expected: # but found /var/dedup/d000/x/file5
+Expected: # but found /var/dedup/d000/x/file5).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file16
-Expected: # but found /var/dedup/d000/x/file2
+Expected: # but found /var/dedup/d000/x/file2).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file245
-Expected: # but found /var/dedup/d000/x/y/file33
+Expected: # but found /var/dedup/d000/x/y/file33).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file158
-Expected: # but found /var/dedup/d000/x/file9
+Expected: # but found /var/dedup/d000/x/file9).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file203
-Expected: # but found /var/dedup/d000/x/file44
+Expected: # but found /var/dedup/d000/x/file44).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file31
-Expected: # but found /var/dedup/d000/x/y/file5
+Expected: # but found /var/dedup/d000/x/y/file5).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file222
-Expected: # but found /var/dedup/d000/x/y/file35
+Expected: # but found /var/dedup/d000/x/y/file35).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file233
-Expected: # but found /var/dedup/d000/x/file14
+Expected: # but found /var/dedup/d000/x/file14).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file70
-Expected: # but found /var/dedup/d000/x/file17
+Expected: # but found /var/dedup/d000/x/file17).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file71
-Expected: # but found /var/dedup/d000/x/file11
+Expected: # but found /var/dedup/d000/x/file11).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file161
-Expected: # but found /var/dedup/d000/x/file37
+Expected: # but found /var/dedup/d000/x/file37).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file297
-Expected: # but found /var/dedup/d000/x/file49
+Expected: # but found /var/dedup/d000/x/file49).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file64
-Expected: # but found /var/dedup/d000/x/y/file12
+Expected: # but found /var/dedup/d000/x/y/file12).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file117
-Expected: # but found /var/dedup/d000/x/file36
+Expected: # but found /var/dedup/d000/x/file36).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file134
-Expected: # but found /var/dedup/d000/x/y/file34
+Expected: # but found /var/dedup/d000/x/y/file34).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file189
-Expected: # but found /var/dedup/d000/x/y/file7
+Expected: # but found /var/dedup/d000/x/y/file7).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file49
-Expected: # but found /var/dedup/d000/x/y/file1
+Expected: # but found /var/dedup/d000/x/y/file1).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file136
-Expected: # but found /var/dedup/d000/x/y/file14
+Expected: # but found /var/dedup/d000/x/y/file14).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file45
-Expected: # but found /var/dedup/d000/x/y/file15
+Expected: # but found /var/dedup/d000/x/y/file15).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file173
-Expected: # but found /var/dedup/d000/x/file7
+Expected: # but found /var/dedup/d000/x/file7).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file88
-Expected: # but found /var/dedup/d000/x/y/file18
+Expected: # but found /var/dedup/d000/x/y/file18).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file13
-Expected: # but found /var/dedup/d000/x/y/file38
+Expected: # but found /var/dedup/d000/x/y/file38).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file220
-Expected: # but found /var/dedup/d000/x/y/file41
+Expected: # but found /var/dedup/d000/x/y/file41).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file228
-Expected: # but found /var/dedup/d000/x/file6
+Expected: # but found /var/dedup/d000/x/file6).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file175
-Expected: # but found /var/dedup/d000/x/file20
+Expected: # but found /var/dedup/d000/x/file20).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file238
-Expected: # but found /var/dedup/d000/x/file12
+Expected: # but found /var/dedup/d000/x/file12).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file149
-Expected: # but found /var/dedup/d000/x/file30
+Expected: # but found /var/dedup/d000/x/file30).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file195
-Expected: # but found /var/dedup/d000/x/y/file27
+Expected: # but found /var/dedup/d000/x/y/file27).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file250
-Expected: # but found /var/dedup/d000/x/file33
+Expected: # but found /var/dedup/d000/x/file33).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file49
-Expected: # but found /var/dedup/d000/x/y/file40
+Expected: # but found /var/dedup/d000/x/y/file40).
 These groupings were incorrect:
   Expected all but one of:
     /var/dedup/d000/file103
@@ -1020,127 +1020,127 @@ Checking output:
 Expected first line to be #!/bin/bash [ignoring]
 Expected: # but found /var/dedup/d001/x/y
 Expected: Removing but found !/bin/bash
-Expected: # but found /var/dedup/d001/aacccccc
+Expected: # but found /var/dedup/d001/aacccccc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file24030
-Expected: # but found /var/dedup/d001/acccabac
+Expected: # but found /var/dedup/d001/acccabac).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file32500
-Expected: # but found /var/dedup/d001/aacbcaac
+Expected: # but found /var/dedup/d001/aacbcaac).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file31724
-Expected: # but found /var/dedup/d001/acbbabca
+Expected: # but found /var/dedup/d001/acbbabca).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file31196
-Expected: # but found /var/dedup/d001/abbbcaaa
+Expected: # but found /var/dedup/d001/abbbcaaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file27258
-Expected: # but found /var/dedup/d001/abaccacc
+Expected: # but found /var/dedup/d001/abaccacc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file25972
-Expected: # but found /var/dedup/d001/aacabccb
+Expected: # but found /var/dedup/d001/aacabccb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file23466
-Expected: # but found /var/dedup/d001/babcbcc
+Expected: # but found /var/dedup/d001/babcbcc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file32629
-Expected: # but found /var/dedup/d001/acaabcc
+Expected: # but found /var/dedup/d001/acaabcc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file15786
-Expected: # but found /var/dedup/d001/aaacaabb
+Expected: # but found /var/dedup/d001/aaacaabb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file3556
-Expected: # but found /var/dedup/d001/bcbabba
+Expected: # but found /var/dedup/d001/bcbabba).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file11929
-Expected: # but found /var/dedup/d001/bcacbaa
+Expected: # but found /var/dedup/d001/bcacbaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file15774
-Expected: # but found /var/dedup/d001/ccaccc
+Expected: # but found /var/dedup/d001/ccaccc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file24025
-Expected: # but found /var/dedup/d001/acccabcc
+Expected: # but found /var/dedup/d001/acccabcc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file1908
-Expected: # but found /var/dedup/d001/acccaab
+Expected: # but found /var/dedup/d001/acccaab).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file634
-Expected: # but found /var/dedup/d001/acbacbab
+Expected: # but found /var/dedup/d001/acbacbab).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file22358
-Expected: # but found /var/dedup/d001/cbcbb
+Expected: # but found /var/dedup/d001/cbcbb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file23001
-Expected: # but found /var/dedup/d001/acbbbbab
+Expected: # but found /var/dedup/d001/acbbbbab).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file1528
-Expected: # but found /var/dedup/d001/acacbb
+Expected: # but found /var/dedup/d001/acacbb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file22181
-Expected: # but found /var/dedup/d001/bacbccc
+Expected: # but found /var/dedup/d001/bacbccc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/file0
-Expected: # but found /var/dedup/d001/bccbaa
+Expected: # but found /var/dedup/d001/bccbaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file22250
-Expected: # but found /var/dedup/d001/aaacccba
+Expected: # but found /var/dedup/d001/aaacccba).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file6837
-Expected: # but found /var/dedup/d001/cacacc
+Expected: # but found /var/dedup/d001/cacacc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file24478
-Expected: # but found /var/dedup/d001/abbbaaab
+Expected: # but found /var/dedup/d001/abbbaaab).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file1630
-Expected: # but found /var/dedup/d001/bcacabc
+Expected: # but found /var/dedup/d001/bcacabc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file3068
-Expected: # but found /var/dedup/d001/acbacb
+Expected: # but found /var/dedup/d001/acbacb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file27637
-Expected: # but found /var/dedup/d001/aacbbbaa
+Expected: # but found /var/dedup/d001/aacbbbaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file6581
-Expected: # but found /var/dedup/d001/baababa
+Expected: # but found /var/dedup/d001/baababa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file9816
-Expected: # but found /var/dedup/d001/bacaabb
+Expected: # but found /var/dedup/d001/bacaabb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file27317
-Expected: # but found /var/dedup/d001/baaccac
+Expected: # but found /var/dedup/d001/baaccac).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file13736
-Expected: # but found /var/dedup/d001/caaacaa
+Expected: # but found /var/dedup/d001/caaacaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file31165
-Expected: # but found /var/dedup/d001/bccabca
+Expected: # but found /var/dedup/d001/bccabca).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file23261
-Expected: # but found /var/dedup/d001/bacbaaa
+Expected: # but found /var/dedup/d001/bacbaaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file15293
-Expected: # but found /var/dedup/d001/acaabbb
+Expected: # but found /var/dedup/d001/acaabbb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file30205
-Expected: # but found /var/dedup/d001/ccbcbaa
+Expected: # but found /var/dedup/d001/ccbcbaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file23005
-Expected: # but found /var/dedup/d001/bccbabc
+Expected: # but found /var/dedup/d001/bccbabc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file16300
-Expected: # but found /var/dedup/d001/aacbacaa
+Expected: # but found /var/dedup/d001/aacbacaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file2452
-Expected: # but found /var/dedup/d001/abaaacbb
+Expected: # but found /var/dedup/d001/abaaacbb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file30570
-Expected: # but found /var/dedup/d001/aaabbabc
+Expected: # but found /var/dedup/d001/aaabbabc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file934
-Expected: # but found /var/dedup/d001/cbabccc
+Expected: # but found /var/dedup/d001/cbabccc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file32409
-Expected: # but found /var/dedup/d001/abbcaab
+Expected: # but found /var/dedup/d001/abbcaab).
 Expected: ) but found 
 Bad format:
   rm /var/dedup/d001/x/y/z/file11612
@@ -1974,262 +1974,262 @@ Expected first line to be #!/bin/bash [ignoring]
 Expected: # but found /var/dedup/d000/x/y
 Expected: # but found /var/dedup/d001/x/y
 Expected: Removing but found !/bin/bash
-Expected: # but found /var/dedup/d000/x/file27
+Expected: # but found /var/dedup/d000/x/file27).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file24574
-Expected: # but found /var/dedup/d000/x/y/file17
+Expected: # but found /var/dedup/d000/x/y/file17).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file28
-Expected: # but found /var/dedup/d000/x/file5
+Expected: # but found /var/dedup/d000/x/file5).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file24030
-Expected: # but found /var/dedup/d001/acccabac
+Expected: # but found /var/dedup/d001/acccabac).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file32500
-Expected: # but found /var/dedup/d001/aacbcaac
+Expected: # but found /var/dedup/d001/aacbcaac).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file31724
-Expected: # but found /var/dedup/d001/acbbabca
+Expected: # but found /var/dedup/d001/acbbabca).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file31196
-Expected: # but found /var/dedup/d000/x/file42
+Expected: # but found /var/dedup/d000/x/file42).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file27348
-Expected: # but found /var/dedup/d001/abbbacbc
+Expected: # but found /var/dedup/d001/abbbacbc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file26590
-Expected: # but found /var/dedup/d001/abaaacaa
+Expected: # but found /var/dedup/d001/abaaacaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file27221
-Expected: # but found /var/dedup/d001/acccabcc
+Expected: # but found /var/dedup/d001/acccabcc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file24025
-Expected: # but found /var/dedup/d001/aacabccb
+Expected: # but found /var/dedup/d001/aacabccb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file634
-Expected: # but found /var/dedup/d001/aabcbbbc
+Expected: # but found /var/dedup/d001/aabcbbbc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file58
-Expected: # but found /var/dedup/d001/ccabacc
+Expected: # but found /var/dedup/d001/ccabacc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file99
-Expected: # but found /var/dedup/d001/aabacacb
+Expected: # but found /var/dedup/d001/aabacacb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file23001
-Expected: # but found /var/dedup/d001/aaacccba
+Expected: # but found /var/dedup/d001/aaacccba).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file3556
-Expected: # but found /var/dedup/d000/x/file30
+Expected: # but found /var/dedup/d000/x/file30).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file11748
-Expected: # but found /var/dedup/d001/ccaccc
+Expected: # but found /var/dedup/d001/ccaccc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file177
-Expected: # but found /var/dedup/d000/x/file50
+Expected: # but found /var/dedup/d000/x/file50).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file3044
-Expected: # but found /var/dedup/d000/x/file35
+Expected: # but found /var/dedup/d000/x/file35).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file43
-Expected: # but found /var/dedup/d000/x/file35
+Expected: # but found /var/dedup/d000/x/file35).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file1949
-Expected: # but found /var/dedup/d001/acacbb
+Expected: # but found /var/dedup/d001/acacbb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file11738
-Expected: # but found /var/dedup/d000/x/file48
+Expected: # but found /var/dedup/d000/x/file48).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file1908
-Expected: # but found /var/dedup/d000/x/y/file33
+Expected: # but found /var/dedup/d000/x/y/file33).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file7534
-Expected: # but found /var/dedup/d000/x/file33
+Expected: # but found /var/dedup/d000/x/file33).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file9966
-Expected: # but found /var/dedup/d000/x/y/file27
+Expected: # but found /var/dedup/d000/x/y/file27).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/file46
-Expected: # but found /var/dedup/d000/x/file17
+Expected: # but found /var/dedup/d000/x/file17).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file184
-Expected: # but found /var/dedup/d000/x/file15
+Expected: # but found /var/dedup/d000/x/file15).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file23261
-Expected: # but found /var/dedup/d000/x/y/file19
+Expected: # but found /var/dedup/d000/x/y/file19).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file25
-Expected: # but found /var/dedup/d000/x/file7
+Expected: # but found /var/dedup/d000/x/file7).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file64
-Expected: # but found /var/dedup/d000/x/y/file14
+Expected: # but found /var/dedup/d000/x/y/file14).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file136
-Expected: # but found /var/dedup/d001/cacacc
+Expected: # but found /var/dedup/d001/cacacc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file49
-Expected: # but found /var/dedup/d001/aaabbbab
+Expected: # but found /var/dedup/d001/aaabbbab).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file189
-Expected: # but found /var/dedup/d001/bccbabc
+Expected: # but found /var/dedup/d001/bccbabc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/file23
-Expected: # but found /var/dedup/d000/x/file11
+Expected: # but found /var/dedup/d000/x/file11).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file3068
-Expected: # but found /var/dedup/d001/abaacc
+Expected: # but found /var/dedup/d001/abaacc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file237
-Expected: # but found /var/dedup/d000/x/file44
+Expected: # but found /var/dedup/d000/x/file44).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file203
-Expected: # but found /var/dedup/d000/x/file25
+Expected: # but found /var/dedup/d000/x/file25).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/file34
-Expected: # but found /var/dedup/d000/x/file28
+Expected: # but found /var/dedup/d000/x/file28).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file70
-Expected: # but found /var/dedup/d000/x/y/file39
+Expected: # but found /var/dedup/d000/x/y/file39).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file214
-Expected: # but found /var/dedup/d000/x/file21
+Expected: # but found /var/dedup/d000/x/file21).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file17
-Expected: # but found /var/dedup/d001/aaccba
+Expected: # but found /var/dedup/d001/aaccba).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file243
-Expected: # but found /var/dedup/d000/x/y/file47
+Expected: # but found /var/dedup/d000/x/y/file47).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file121
-Expected: # but found /var/dedup/d001/baaccac
+Expected: # but found /var/dedup/d001/baaccac).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file6581
-Expected: # but found /var/dedup/d001/aacbbbaa
+Expected: # but found /var/dedup/d001/aacbbbaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/file0
-Expected: # but found /var/dedup/d000/x/y/file21
+Expected: # but found /var/dedup/d000/x/y/file21).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file91
-Expected: # but found /var/dedup/d000/x/y/file23
+Expected: # but found /var/dedup/d000/x/y/file23).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file30
-Expected: # but found /var/dedup/d000/x/file19
+Expected: # but found /var/dedup/d000/x/file19).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file37
-Expected: # but found /var/dedup/d000/x/y/file35
+Expected: # but found /var/dedup/d000/x/y/file35).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file275
-Expected: # but found /var/dedup/d000/x/file20
+Expected: # but found /var/dedup/d000/x/file20).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file238
-Expected: # but found /var/dedup/d000/x/file49
+Expected: # but found /var/dedup/d000/x/file49).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/file32
-Expected: # but found /var/dedup/d000/x/file2
+Expected: # but found /var/dedup/d000/x/file2).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file141
-Expected: # but found /var/dedup/d000/x/y/file12
+Expected: # but found /var/dedup/d000/x/y/file12).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file117
-Expected: # but found /var/dedup/d001/bacbccc
+Expected: # but found /var/dedup/d001/bacbccc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file22250
-Expected: # but found /var/dedup/d001/cbcbb
+Expected: # but found /var/dedup/d001/cbcbb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file15786
-Expected: # but found /var/dedup/d000/x/y/file20
+Expected: # but found /var/dedup/d000/x/y/file20).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file181
-Expected: # but found /var/dedup/d000/x/file16
+Expected: # but found /var/dedup/d000/x/file16).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file8149
-Expected: # but found /var/dedup/d001/aaacaaac
+Expected: # but found /var/dedup/d001/aaacaaac).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file45
-Expected: # but found /var/dedup/d000/x/y/file15
+Expected: # but found /var/dedup/d000/x/y/file15).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file278
-Expected: # but found /var/dedup/d001/bcbbabb
+Expected: # but found /var/dedup/d001/bcbbabb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file134
-Expected: # but found /var/dedup/d001/abbbcab
+Expected: # but found /var/dedup/d001/abbbcab).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file22361
-Expected: # but found /var/dedup/d001/bcbabba
+Expected: # but found /var/dedup/d001/bcbabba).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file31205
-Expected: # but found /var/dedup/d001/abbcccab
+Expected: # but found /var/dedup/d001/abbcccab).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file108
-Expected: # but found /var/dedup/d001/acbbbbab
+Expected: # but found /var/dedup/d001/acbbbbab).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file32629
-Expected: # but found /var/dedup/d000/x/file41
+Expected: # but found /var/dedup/d000/x/file41).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file9624
-Expected: # but found /var/dedup/d001/babaaba
+Expected: # but found /var/dedup/d001/babaaba).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file31
-Expected: # but found /var/dedup/d000/x/y/file5
+Expected: # but found /var/dedup/d000/x/y/file5).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file10073
-Expected: # but found /var/dedup/d000/x/y/file7
+Expected: # but found /var/dedup/d000/x/y/file7).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file27317
-Expected: # but found /var/dedup/d000/x/y/file1
+Expected: # but found /var/dedup/d000/x/y/file1).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/file13
-Expected: # but found /var/dedup/d000/x/file12
+Expected: # but found /var/dedup/d000/x/file12).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file87
-Expected: # but found /var/dedup/d001/caabbba
+Expected: # but found /var/dedup/d001/caabbba).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file31165
-Expected: # but found /var/dedup/d001/bccabca
+Expected: # but found /var/dedup/d001/bccabca).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file13684
-Expected: # but found /var/dedup/d001/aacbacaa
+Expected: # but found /var/dedup/d001/aacbacaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file11
-Expected: # but found /var/dedup/d000/x/y/file16
+Expected: # but found /var/dedup/d000/x/y/file16).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file10132
-Expected: # but found /var/dedup/d001/cbcbccb
+Expected: # but found /var/dedup/d001/cbcbccb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file7529
-Expected: # but found /var/dedup/d001/acaacccb
+Expected: # but found /var/dedup/d001/acaacccb).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/x/y/file22
-Expected: # but found /var/dedup/d000/x/y/file9
+Expected: # but found /var/dedup/d000/x/y/file9).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file16100
-Expected: # but found /var/dedup/d000/x/y/file40
+Expected: # but found /var/dedup/d000/x/y/file40).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file172
-Expected: # but found /var/dedup/d001/cccbbca
+Expected: # but found /var/dedup/d001/cccbbca).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file144
-Expected: # but found /var/dedup/d001/aaccbacc
+Expected: # but found /var/dedup/d001/aaccbacc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file28
-Expected: # but found /var/dedup/d001/babaaa
+Expected: # but found /var/dedup/d001/babaaa).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file13
-Expected: # but found /var/dedup/d000/x/file37
+Expected: # but found /var/dedup/d000/x/file37).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file6
-Expected: # but found /var/dedup/d000/x/file24
+Expected: # but found /var/dedup/d000/x/file24).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file25977
-Expected: # but found /var/dedup/d001/acacabbc
+Expected: # but found /var/dedup/d001/acacabbc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file22170
-Expected: # but found /var/dedup/d001/cbbac
+Expected: # but found /var/dedup/d001/cbbac).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d000/file118
-Expected: # but found /var/dedup/d001/cbabccc
+Expected: # but found /var/dedup/d001/cbabccc).
 Expected: ) but found 
 Expected: # but found rm /var/dedup/d001/x/y/z/file32409
-Expected: # but found /var/dedup/d001/abbcaab
+Expected: # but found /var/dedup/d001/abbcaab).
 Expected: ) but found 
 Bad format:
   rm /var/dedup/d001/x/y/z/file11612
