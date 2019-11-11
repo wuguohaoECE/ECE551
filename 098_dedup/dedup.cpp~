@@ -1,0 +1,43 @@
+#include <iostream>
+#include <functional>
+#include <string>
+#include<fstream>
+#include <unordered_map>
+#include <vector>
+#include <sys/stat.h>
+#include <sys/sysmacros.h>
+#include <sys/types.h>
+#include <time.h>
+#include <unistd.h>
+
+using namespace std;
+typedef unordered_map<string,vector<string>> stringmap;
+
+void insert_file(stringmap & map, const char * link) {
+  ifstream in(link);
+  string contents;
+  if (in) {
+    in.seekg(0, ios::end);
+    size_t len = in.tellg();
+    in.seekg(0);
+    contents.resize(len + 1, '\0');
+    in.read(&contents[0], len);
+    map[contents].emplace_back(link);
+  }
+}
+
+
+
+
+int main() {
+  stringmap second;
+  //insert_file(second, "~/ece551/098_dedup/README");
+  insert_file(second, "README");
+  for ( auto it = second.begin(); it != second.end(); ++it ) {
+    std::cout << " " << it->first << ":" << it->second.size();
+    std::cout << std::endl;
+    cout << it->second[0] << endl;
+  }
+  
+  EXIT_SUCCESS;
+}
