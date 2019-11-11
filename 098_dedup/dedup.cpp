@@ -70,7 +70,7 @@ int main(int argc, char ** argv) {
   for (auto it = dedup.begin(); it != dedup.end(); ++it) {
     if(it->second.size() > 1) {
       for(size_t i = 1; i < it->second.size(); i++) {
-	cout << "#Removing " << it->second[i] << " (duplicate of"<< "\n" << it->second[0] << ")."<< "\n";
+	cout << "#Removing " << it->second[i] << " (duplicate of " << it->second[0] << ")."<< "\n";
        	cout << "rm " << it->second[i] << endl;
       }
     }
