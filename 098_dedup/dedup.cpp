@@ -69,11 +69,11 @@ int main(int argc, char ** argv) {
   cout << "#!/bin/bash" << endl;
   for (auto it = dedup.begin(); it != dedup.end(); ++it) {
     if(it->second.size() > 1) {
-      for(int i = 1; i < it->second.size(); i++) {
+      for(size_t i = 1; i < it->second.size(); i++) {
 	cout << "#Removing " << it->second[i] << " (duplicate of"<< "\n" << it->second[0] << "\n" << endl;
        	cout << "rm " << it->second[i] << "\n" << endl;
       }
     }
   }  
-  EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }
