@@ -41,7 +41,6 @@ void find_file(stringmap & map, const char * link) {
       string file_n(ent->d_name);
       string new_dir = old_dir + "/" + file_n;
       if( ent->d_type == DT_DIR ) {
-	cout << new_dir << endl;
 	find_file(map, new_dir.c_str());
       }
       else if(ent->d_type != DT_LNK) {
