@@ -33,7 +33,7 @@ uint64_t * readFrequencies(const char * fname) {
     contents.resize(len + 1, '\0');
     in.read(&contents[0], len);
   }
-  uint64_t * count = new uint64_t(257);
+  uint64_t * count = new uint64_t[257]();
   for (auto it = contents.begin(); it != contents.end(); ++it) {
     count[(int)*it]++;
   }
