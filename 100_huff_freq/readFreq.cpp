@@ -24,6 +24,7 @@ void printSym(std::ostream & s, unsigned sym) {
 }
 uint64_t * readFrequencies(const char * fname) {
   //WRITE ME!
+  /*
   ifstream in(fname);
   string contents;
   if (in) {
@@ -33,10 +34,23 @@ uint64_t * readFrequencies(const char * fname) {
     contents.resize(len + 1, '\0');
     in.read(&contents[0], len);
   }
-  uint64_t * count = new uint64_t[257]();
-  for (auto it = contents.begin(); it != contents.end(); ++it) {
-    count[(int)*it]++;
+  */
+  FILE * f = fopen(fname, "r");
+  if (f == NULL) {
+    perror("cant open file");
   }
+  uint64_t * count = new uint64_t[257]();
+  count[256] = 1;
+  int c;
+  while ((c = fgetc(f)) != EOF) {
+    count[c]++;
+  }
+  fclose(f);
+  /*
+  for (auto it = contents.begin(); it != contents.end(); ++it) {
+    count[(uint64_t)*it]++;
+  }
+  */
   return count;
 }
 
