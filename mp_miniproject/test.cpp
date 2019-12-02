@@ -1,0 +1,30 @@
+#include <cstdlib>
+#include <cstdio>
+#include <iostream>
+#include <string>
+#include <unordered_set>
+#include "test.h"
+
+using namespace std;
+
+unordered_set<int> isDelete;
+
+int main(void) {
+  string pound("dsadassadsdadadsa");
+  if( pound.find("#") == string::npos ) {
+    cout << "noo" << endl;
+  }
+  cout << "pound: " << pound << endl;
+  ::isDelete.emplace(1);
+  ::isDelete.emplace(2);
+  cout << ::isDelete.count(3) << endl;
+  string a("345");
+  a.erase(0,1);
+  cout << a << endl;
+  char * b;
+  double c = strtod(a.c_str(), &b);
+  cout << c << endl;
+  cout << b-&(a[0]) << endl;
+  cout << ::a << endl;
+  return EXIT_SUCCESS;
+}

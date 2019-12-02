@@ -1,0 +1,151 @@
+TEST FILEFILE DESCRIPTION:
+gw79
+
+1.StandardTest.txt
+	This test contains example from "numerics.txt"
+	run ./Numerics < StandardTest.txt and you will see
+	output:
+	defined f(x y z)
+	f(3 4.2 5) = 14.6 [correct]
+	f(-1 9.2 6) = -6.2 [correct]
+	This is correct because this is what numerics.txt defined it should like.
+
+2.test1.txt
+	run ./Numerics < test1.txt
+
+	NOTICE:
+	The First argument for test MUST BE full expression. It means it can not be a constant.
+	"test 1 1" is not correct since my program will detect "(" at first.
+	But "test (+ 1 1) 2" is OK. It means you can use my built-in function or user-defined function
+
+	Nesting function is available in both "define" and "test". However, each user-defined funciton can only be used ONLY
+	ONCE at the same time to "define" and "test". ex: define (g a b) = (+ (f a) (f b))  is not allow!!
+	Here, "ONCE" means once in both "define" and "test". ex: define(f x y) = (+ x y) define (g x y) = (+ (f x y) y) test (g (f 1 2) 2) is not allow!!
+	because function is used in "define" and "test" one time respectively, totally 2 times.
+
+	I add an command "exit" to help you close the program.
+
+	
+	THe first part is simple and correct expression.
+	The second part is simple but grammarly mistaken expression
+	    1, Redefine function: My program will tell you and ask you to type again
+	    2 Do not use keyword "define" or "test"
+	    3 Without "="
+	    4 First argument do not use full expression
+	    5 without ")"
+	    6 lack parameter
+
+	The third part is complex and correct expression
+	The forth part is to test pound-sign.
+	    The second line didnot work but The program will tell you what's wrong.
+
+	When I run this, I got this valgrind output:
+	
+	    
+==4284== Memcheck, a memory error detector
+==4284== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4284== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4284== Command: ./Numerics
+==4284==
+#simple expresssion
+define (plus x y) = (+ x y)
+define (minus x y) = (- x y)
+define (multiply x y) = (* x y)
+define (divide x y) = (/ x y)
+define (mode x y) = (% x y)
+define (pow x y) = (^ x y)
+define (log x y) = (logb x y)
+define (Floor x) = (floor x)
+define (Ceil x) = (ceil x)
+define (Round x) = (round x)
+define (Select x y z) = (select x y z)
+test (plus 2 3) (minus 5 0)
+test (multiply 2 2) 4
+test (divide 4 2) 2
+test (mode 5 2) 1
+test (pow 2 2) 4
+test (log 2 4) 2
+test (Floor 3.4) 3
+test (Ceil 3.4) 4
+test (Round 3.4) 3
+test (Select 1 2 3) 2
+size: 0
+plz use keyword: define or test
+test (Select -1 2 3) 3
+#simple expression with grammar mistake
+define (plus x y) = (- x y)
+(plus x y) = (- x y)
+define (f x y) (+ x y)
+test (2) 2
+define (f x = (- x y)
+define (f x y) = (- x y
+define (f x) = (- x y)
+
+#complext correct expression
+define (f a b c d) = (plus (divide a b) (multiply c d))
+define (g a b c) = (Select (Floor a) (Ceil b) (Round c))
+test (f 1 2 3 4) 12.5
+test (g 10.2 8.2 15.5) 9
+test (g -10.2 8.2 15.5) 16
+
+
+#pound-sign
+test (f 1 2 3 4) 12.5 ## pound sign is ok
+test (f 1 2 # 3 4) 12.5) ## pound sign is not okdefined plus(x y)
+defined minus(x y)
+defined multiply(x y)
+defined divide(x y)
+defined mode(x y)
+defined pow(x y)
+defined log(x y)
+defined Floor(x)
+defined Ceil(x)
+defined Round(x)
+defined Select(x y z)
+plus(2 3) = 5 [correct]
+multiply(2 2) = 4 [correct]
+divide(4 2) = 2 [correct]
+mode(5 2) = 1 [correct]
+pow(2 2) = 4 [correct]
+log(2 4) = 2 [correct]
+Floor(3.4) = 3 [correct]
+Ceil(3.4) = 4 [correct]
+Round(3.4) = 3 [correct]
+Select(1 2 3) = 2 [correct]
+Select(-1 2 3) = 3 [correct]
+size: 0
+plz use keyword: define or test
+you have already define function: plus
+plz use keyword: define or test
+excepted = but find (
+Invalid op: 2
+excepted ) but find (
+lack )
+No this parameter y
+plz use keyword: define or test
+size: 0
+plz use keyword: define or test
+defined f(a b c d)
+defined g(a b c)
+f(1 2 3 4) = 12.5 [correct]
+g(10.2 8.2 15.5) = 9 [correct]
+g(-10.2 8.2 15.5) = 16 [correct]
+plz use keyword: define or test
+plz use keyword: define or test
+size: 0
+plz use keyword: define or test
+size: 22
+f(1 2 3 4) = 12.5 [correct]
+
+size: 12
+lack )
+exit
+==4284==
+==4284== HEAP SUMMARY:
+==4284==     in use at exit: 0 bytes in 0 blocks
+==4284==   total heap usage: 2,050 allocs, 2,050 frees, 210,433 bytes allocated
+==4284==
+==4284== All heap blocks were freed -- no leaks are possible
+==4284==
+==4284== For counts of detected and suppressed errors, rerun with: -v
+==4284== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

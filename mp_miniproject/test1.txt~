@@ -1,0 +1,33 @@
+#simple expresssion
+define (plus x y) = (+ x y)
+define (minus x y) = (- x y)
+define (multiply x y) = (* x y)
+define (divide x y) = (/ x y)
+define (mode x y) = (% x y)
+define (pow x y) = (^ x y)
+define (log x y) = (logb x y)
+define (Floor x) = (floor x)
+define (Ceil x) = (ceil x)
+define (Round x) = (round x)
+define (Select x y z) = (select x y z)
+test (plus 2 3) (minus 5 0)
+test (multiply 2 2) 4
+test (divide 4 2) 2
+test (mode 5 2) 1
+test (pow 2 2) 4
+test (log 2 4) 2
+test (Floor 3.4) 3
+test (Ceil 3.4) 4
+test (Round 3.4) 3
+test (Select 1 2 3) 2
+test (Select -1 2 3) 3
+#simple expression with grammar mistake
+define (plus x y) = (- x y)
+(plus x y) = (- x y)
+define (f x y) (+ x y)
+test (2) 2
+define (f x = (- x y)
+define (f x y) = (- x y
+    #complext expression
+    DefineFunction("define (K x y z) = (J (G x) (H y) (I z))", allFunctions);
+    checkAnswer("test (K -1 2 3) 3", allFunctions);
