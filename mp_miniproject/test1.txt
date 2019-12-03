@@ -21,6 +21,7 @@ test (Ceil 3.4) 4
 test (Round 3.4) 3
 test (Select 1 2 3) 2
 test (Select -1 2 3) 3
+
 #simple expression with grammar mistake
 define (plus x y) = (- x y)
 (plus x y) = (- x y)
@@ -29,6 +30,8 @@ test (2) 2
 define (f x = (- x y)
 define (f x y) = (- x y
 define (f x) = (- x y)
+define (p x x) = (+ x x)
+define (q x) = (+ x)
 
 #complext correct expression
 define (f a b c d) = (plus (divide a b) (multiply c d))

@@ -34,7 +34,8 @@ gw79
 	    4 First argument do not use full expression
 	    5 without ")"
 	    6 lack parameter
-
+	    7 repeted para
+	    8 lack para
 	The third part is complex and correct expression
 	The forth part is to test pound-sign.
 	    The second test didnot work but The program will tell you what's wrong.

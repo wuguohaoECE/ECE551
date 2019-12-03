@@ -14,6 +14,21 @@
 #include <exception>
 using namespace std;
 
+// input: a vector of parameter
+// output: check whether those parameters are unique, and return true or false
+bool IsUniquePara(vector<string> & input) {
+  unordered_set<string> test;
+  for(auto it = input.begin(); it != input.end(); ++it) {
+    if( test.count(*it) ) {
+      return false;
+    }
+    else {
+      test.insert(*it);
+    }
+  }
+  return true;
+}
+
 //  input: reference of string with space at the front
 //  output: string with no space at the front
 void StringSkipSpace(string & inputString) {
@@ -202,6 +217,9 @@ Expression * parseOp(string & inputString,
     for(auto it = parameters.begin(); it != parameters.end(); ++it) {
       StringSkipSpace(inputString);
       Expression * tempExpression = ParseExpression(inputString, funcList, newfunction);
+      if(tempExpression == NULL) {
+	return NULL;
+      }
       (*it)->setMaterial(tempExpression);
     }
     StringSkipSpace(inputString);
@@ -223,7 +241,7 @@ Expression * ParseExpression(string & inputString,
 		map<string, functionExpression *> funcList,
 		functionExpression * newfunction) {
   StringSkipSpace(inputString);
-  if( inputString[0] == '\0' ) {
+  if( inputString[0] == '\0' || inputString[0] == ')' ) {
     cerr << "lack expression" << endl;
     return NULL;
   }
@@ -308,6 +326,12 @@ void DefineFunction(string inputString,
     cout << "excepted = but find " << inputString[0] << endl;
     throw exception();
   }
+  //check whether parameter is unique
+  if( !IsUniquePara(parametername) ) {
+    cerr << "your input parameter is not unique" << endl;
+    throw exception();
+  }
+  
   inputString = inputString.erase(0, 1);
   vector<parameterExpression *> parameters;
   for (int j = 0; j < num_of_para; j++) {
