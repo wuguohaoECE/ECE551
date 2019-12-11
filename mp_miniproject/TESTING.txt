@@ -43,57 +43,7 @@ gw79
 
 	When I run this, I got this valgrind output:
 	
-	    
-==4284== Memcheck, a memory error detector
-==4284== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==4284== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==4284== Command: ./Numerics
-==4284==
-#simple expresssion
-define (plus x y) = (+ x y)
-define (minus x y) = (- x y)
-define (multiply x y) = (* x y)
-define (divide x y) = (/ x y)
-define (mode x y) = (% x y)
-define (pow x y) = (^ x y)
-define (log x y) = (logb x y)
-define (Floor x) = (floor x)
-define (Ceil x) = (ceil x)
-define (Round x) = (round x)
-define (Select x y z) = (select x y z)
-test (plus 2 3) (minus 5 0)
-test (multiply 2 2) 4
-test (divide 4 2) 2
-test (mode 5 2) 1
-test (pow 2 2) 4
-test (log 2 4) 2
-test (Floor 3.4) 3
-test (Ceil 3.4) 4
-test (Round 3.4) 3
-test (Select 1 2 3) 2
-size: 0
-plz use keyword: define or test
-test (Select -1 2 3) 3
-#simple expression with grammar mistake
-define (plus x y) = (- x y)
-(plus x y) = (- x y)
-define (f x y) (+ x y)
-test (2) 2
-define (f x = (- x y)
-define (f x y) = (- x y
-define (f x) = (- x y)
 
-#complext correct expression
-define (f a b c d) = (plus (divide a b) (multiply c d))
-define (g a b c) = (Select (Floor a) (Ceil b) (Round c))
-test (f 1 2 3 4) 12.5
-test (g 10.2 8.2 15.5) 9
-test (g -10.2 8.2 15.5) 16
-
-
-#pound-sign
-test (f 1 2 3 4) 12.5 ## pound sign is ok
-test (f 1 2 # 3 4) 12.5) ## pound sign is not okdefined plus(x y)
 defined minus(x y)
 defined multiply(x y)
 defined divide(x y)
@@ -158,17 +108,17 @@ exit
 	run ./Numerics < test2_3.txt
 
 	NOTICE:
-	This test file is for step 2 and step 3
+	1, This test file is for step 2 and step 3
 	
-	For step 2, you should use command "numint", then the first augument is the name of a user-defined function. The second argument is the step size, the remaining arguments come in pairs, specifying the range of each parameter.
+	2, For step 2, you should use command "numint", then the first augument is the name of a user-defined function. The second argument is the step size, the remaining arguments come in pairs, specifying the range of each parameter.
 	
-	Step 3 is similar. The command change to "mcint". And the second argument become the number of trails.
+	3, Step 3 is similar. The command change to "mcint". And the second argument become the number of trails.
 	
-	I have redefine some function for step2 and step3. So plz RESTART the program.
+	4, I have redefine some function for step2 and step3. So plz RESTART the program.
 
-	Numerical integration is slow, so the program will show how much work it has done if number of calculation is more than 100000.
+	5, Numerical integration is slow, so the program will show how much work it has done if number of calculation is more than 100000.
 
-	When I run my testcase, I got the following output:
+	6, When I run my testcase, I got the following output:
 
 
 defined f(x)
@@ -222,28 +172,35 @@ For each Parameter, you should write lower limit first and upper limit later
 	
 	3,The first argument is name of the function, second is "gamma", third is "convergedDistance",forth is "maximum number of steps". And last argument is the "starting point", which will have as many as the function has parameters.Importance: I SWAP THE THIRD AND FORTH PARAMETER.
 
+	4,I have redefine some function for step2 and step3. So plz RESTART the program.
+
 When I run my test case. I got this:
 
 defined f(x)
 defined g(x)
 defined h(x y)
+defined H(x)
+MIN: Local maximun(minumum) is 2.35768e-05 when (x) = (-0.00485559)
+MIN: Local maximun(minumum) is 1.48659e-05 when (x) = (0.00385564)
 MIN: Local maximun(minumum) is 2.10778e-05 when (x,y) = (-1.99892,4.99554)
 MIN: Local maximun(minumum) is 0.00248993 when (x,y) = (-1.98207,4.95343)
 MIN: Local maximun(minumum) is 2.48758e-05 when (x,y) = (-1.99821,4.99535)
+defined F(x)
+MAX: Local maximun(minumum) is -2.27384e-05 when (x) = (-2.00477)
 plz use keyword: define, test, numint, mcint, max, min
 defined abs(x)
 MIN: Do not converged but current Local maximun(minumum) is 0.1 when (x) = (-0.1)
 defined abs1(x)
 defined A(x y)
-MIN: Local maximun(minumum) is 4.70042e-05 when (x,y) = (0.00685596,0.00685596)
-
 
 MIN: Local maximun(minumum) is 4.70042e-05 when (x,y) = (0.00685596,0.00685596)
+
 	
 	This is correct because:
 	1, I test function with different dimension
 	2, If it is not converged, I print the corresponding result.
 	3, I try different gamma and converged distance.
-	
+	4, I try different starting point, both on left side and right side.
+	5, I try both max and min
 
 	

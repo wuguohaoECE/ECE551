@@ -2,9 +2,14 @@
 define (f x) = (+ x 2)
 define (g x) = (- x 5)
 define (h x y) = (+ (^ (f x) 2) (^ (g y) 2) )
+define (H x) = (^ x 2)
+min H 0.1 0.001 1000 -100
+min H 0.1 0.001 1000 100
 min h 0.1 0.001 10000 0 0
 min h 0.01 0.001 100000 0 0
-min h 0.01 0.0001 100000 0 0 
+min h 0.01 0.0001 100000 0 0
+define (F x) = (- 0 (^ (+ x 2) 2))
+max F 0.1 0.001 1000 -100
 #not a continueous differentiable function, which may never converge
 define (abs x) = (select x x (- 0 x))
 min abs 0.1 0.001 10000 5
