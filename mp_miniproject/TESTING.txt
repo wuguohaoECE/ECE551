@@ -22,6 +22,7 @@ gw79
 	ONCE at the same time to "define" and "test". ex: define (g a b) = (+ (f a) (f b))  is not allow!!
 	Here, "ONCE" means once in both "define" and "test". ex: define(f x y) = (+ x y) define (g x y) = (+ (f x y) y) test (g (f 1 2) 2) is not allow!!
 	because function is used in "define" and "test" one time respectively, totally 2 times.
+	Also, a function can not be nested for more than one time. ex: we define f(x), then define (g x) = (f x). then we CANNOT define (h x) = (f x) because it will make (g x) failed.
 
 	I add an command "exit" to help you close the program.
 
@@ -150,3 +151,99 @@ exit
 ==4284==
 ==4284== For counts of detected and suppressed errors, rerun with: -v
 ==4284== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+3.test2_3.txt
+	run ./Numerics < test2_3.txt
+
+	NOTICE:
+	This test file is for step 2 and step 3
+	
+	For step 2, you should use command "numint", then the first augument is the name of a user-defined function. The second argument is the step size, the remaining arguments come in pairs, specifying the range of each parameter.
+	
+	Step 3 is similar. The command change to "mcint". And the second argument become the number of trails.
+	
+	I have redefine some function for step2 and step3. So plz RESTART the program.
+
+	Numerical integration is slow, so the program will show how much work it has done if number of calculation is more than 100000.
+
+	When I run my testcase, I got the following output:
+
+
+defined f(x)
+numerical intergration: 20
+Monte Carlo simulation result: 19.9541
+numerical intergration: -29.12
+Monte Carlo simulation result: -29.2555
+numerical intergration: -2.19945e-12
+Monte Carlo simulation result: 0.786492
+defined g(x)
+defined h(x y)
+There will be approximately 120000 points to calculate
+0% of work have been processed. plz wait
+10% of work have been processed. plz wait
+20% of work have been processed. plz wait
+30% of work have been processed. plz wait
+40% of work have been processed. plz wait
+50% of work have been processed. plz wait
+60% of work have been processed. plz wait
+70% of work have been processed. plz wait
+80% of work have been processed. plz wait
+90% of work have been processed. plz wait
+numerical intergration: 112
+Monte Carlo simulation result: 111.775
+defined abs(x)
+defined abs1(x)
+defined u(x y)
+numerical intergration: 12
+Monte Carlo simulation result: 11.9904
+plz use keyword: define, test, numint, mcint, max, min
+YOU PARAMETERS NUMBER IS NOT MATCH
+For each Parameter, you should write lower limit first and upper limit later
+
+	
+	This is correct because:
+	1, I try different functions.
+	2, I try different range of integration
+	3, Numerical method and monte carlo result is closed
+	
+
+
+
+	
+4.test4.txt
+	run ./Numerics < test4.txt
+
+	NOTICE:
+	1,This test file is for step 4.
+	
+	2,I CHANGE the format of input. The first is command which could be "max" or "min".
+	
+	3,The first argument is name of the function, second is "gamma", third is "convergedDistance",forth is "maximum number of steps". And last argument is the "starting point", which will have as many as the function has parameters.Importance: I SWAP THE THIRD AND FORTH PARAMETER.
+
+When I run my test case. I got this:
+
+defined f(x)
+defined g(x)
+defined h(x y)
+MIN: Local maximun(minumum) is 2.10778e-05 when (x,y) = (-1.99892,4.99554)
+MIN: Local maximun(minumum) is 0.00248993 when (x,y) = (-1.98207,4.95343)
+MIN: Local maximun(minumum) is 2.48758e-05 when (x,y) = (-1.99821,4.99535)
+plz use keyword: define, test, numint, mcint, max, min
+defined abs(x)
+MIN: Do not converged but current Local maximun(minumum) is 0.1 when (x) = (-0.1)
+defined abs1(x)
+defined A(x y)
+MIN: Local maximun(minumum) is 4.70042e-05 when (x,y) = (0.00685596,0.00685596)
+
+
+MIN: Local maximun(minumum) is 4.70042e-05 when (x,y) = (0.00685596,0.00685596)
+	
+	This is correct because:
+	1, I test function with different dimension
+	2, If it is not converged, I print the corresponding result.
+	3, I try different gamma and converged distance.
+	
+
+	

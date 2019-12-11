@@ -426,15 +426,302 @@ void checkAnswer(string inputString,
   }
 }
 
+void skipSpace(const char ** strp) {
+  while(isspace(**strp)) {
+    *strp = *strp + 1;
+  }
+}
+
+//input: numerical parameter in char** form
+//seperate the parameters into a vector of parameters
+void scanparameter(const char ** in, vector<double> & parameter) {
+  char * next;
+  do {
+    double tmp = strtod(*in, &next);
+    //cout << tmp << " ";
+    if (next == *in) {
+      std::cerr << "Expected a number, but found " << **in << "\n";
+      throw exception();
+    }
+    parameter.push_back(tmp);
+    *in = next;
+    skipSpace(in);
+  } while(**in != '\0');
+}
+
+
+bool lessthan(double a, double b) {
+  a += 0.00000000001;
+  if(a < b) {
+    return true;
+  }
+  return false;
+}
+
+//given the function name, step size, ranges of each parameter.
+//The functino print out the numerical integration
+void Numint(string inputString,
+                 map<std::string, functionExpression *> & allFunctions) {
+  inputString = inputString.substr(6);
+  StringSkipSpace(inputString);
+  int length = FindWordLength(inputString);
+  string fname = inputString.substr(0,length);
+  if (allFunctions.find(fname) == allFunctions.end()) {
+    cerr << "YOU DO NOT DEFINE THIS FUNCTION: " << fname << endl;
+    throw exception();
+  }
+  inputString = inputString.substr(length);
+  functionExpression * func = allFunctions[fname];
+  const char * inputChar = inputString.c_str();
+  vector<double> parameter;
+  scanparameter(&inputChar, parameter);
+  size_t dimension = func->getLength();
+  if( parameter.size() != dimension * 2 + 1) {
+    cerr << "YOU PARAMETERS NUMBER IS NOT MATCH" << endl;
+    throw exception();
+  }
+
+  double sum = 0;
+  double width = parameter[0];
+  vector<double> vec1;
+  vector<double> vec2;
+  int total_point = 1;
+  //vec1 record the lower range. vec2 record the upper range
+  for(size_t i = 0; i < dimension; i++) {
+    vec1.push_back(parameter[2*i+1]);
+    vec2.push_back(parameter[2*i+2]);
+    if(vec2[i] <= vec1[i]) {
+      cerr << "For each Parameter, you should write lower limit first and upper limit later" << endl;
+      throw exception();
+    }
+    total_point *= (vec2[i] - vec1[i])/width;
+  }
+  bool show_process = false;
+  if(total_point > 100000) {
+    cout << "There will be approximately " << total_point << " points to calculate" << endl;
+    show_process = true;
+  }
+  total_point = total_point/10;
+  int process = 0;
+  vector<double> vec1_cp = vec1;
+  while(1) {
+    if(show_process && process % total_point == 0) { 
+      cout << 10 * process/total_point << "% of work have been processed. plz wait" << endl;
+    }
+    double delta = 0;
+    vector<double> vec3 = vec1;
+    //The first while loop is to calculate the small area of one point
+    //vec3 record the base points, and vec1 calculate the surrounding points
+    //for example, vec3 is (x,y) and vec1 will be (x,y) (x+width,y) (x,y+width) (x+width,y+width) throught the for loop
+    while(1) {
+      delta += func->evaluateFromNumPara(vec1);
+      vec1[0] += width;
+      for(size_t j = 0; j < dimension - 1; j++) {
+	if( lessthan( vec3[j] + width, vec1[j] ) ) {
+	  vec1[j] = vec3[j];
+	  vec1[j+1] +=  width;
+	}
+      }
+      if( lessthan(vec3[dimension - 1]+width, vec1[dimension - 1] ) ){
+	vec1 = vec3;
+	break;
+      }
+    }
+    sum = sum + delta / pow(2/width, dimension);
+    vec1[0] = vec1[0] + width;
+    //vec2 is used to recorded the upper range
+    for(size_t i = 0; i < dimension - 1; i++) {
+      if(vec1[i] > vec2[i] - width) {
+	vec1[i] = vec1_cp[i];
+	vec1[i+1] = vec1[i+1] + width;
+      }
+    }
+    if(vec1[dimension - 1] > vec2[dimension - 1]- width) {
+      break;
+    }
+    process++;
+  }
+  cout << "numerical intergration: " << sum << endl;
+}
+
+  
+  
+
+
+//output a random number between fMin and fMax
+double fRand(double fMin, double fMax)
+{
+    double f = (double)rand() / RAND_MAX;
+    return fMin + f * (fMax - fMin);
+}
+
+//given the function, number of trails and ranges of each parameters
+//print out the monte carlo result of function integration
+void mcint(string inputString,
+                 map<std::string, functionExpression *> & allFunctions) {
+  inputString = inputString.substr(5);
+  StringSkipSpace(inputString);
+  int length = FindWordLength(inputString);
+  string fname = inputString.substr(0,length);
+  if (allFunctions.find(fname) == allFunctions.end()) {
+    cerr << "YOU DO NOT DEFINE THIS FUNCTION: " << fname << endl;
+    throw exception();
+  }
+  inputString = inputString.substr(length);
+  functionExpression * func = allFunctions[fname];
+  const char * inputChar = inputString.c_str();
+  vector<double> parameter;
+  scanparameter(&inputChar, parameter);
+  size_t dimension = func->getLength();
+  if( parameter.size() != dimension * 2 + 1) {
+    cerr << "YOU PARAMETERS NUMBER IS NOT MATCH" << endl;
+    throw exception();
+  }
+  //vec1 is lower limit, vec2 is upper limit
+  //a random vector will be created and stored in vec3
+  double sum = 0;
+  size_t trials = (size_t)parameter[0];
+  vector<double> vec1;
+  vector<double> vec2;
+  vector<double> vec3(dimension, 0);
+  for(size_t i = 0; i < dimension; i++) {
+    vec1.push_back(parameter[2*i+1]);
+    vec2.push_back(parameter[2*i+2]);
+  }
+  for(size_t i = 0; i < trials; i++) {
+    for(size_t j = 0; j < dimension; j++) {
+      vec3[j] = fRand(vec1[j], vec2[j]);
+    }
+    sum += func->evaluateFromNumPara(vec3);
+  }
+  double integrate = sum/trials;
+  for(size_t j = 0; j < dimension; j++) {
+    integrate = integrate * (vec2[j]- vec1[j]);
+  }
+  cout << "Monte Carlo simulation result: " << integrate << endl;
+}
+
+//given two vector(can be considered as two points)
+//calculate the distnce between two point
+double dist(vector<double> & a, vector<double> & b) {
+  if(a.size() != b.size()) {
+    cout << "a and b is not match" << endl;
+    throw exception();
+  }
+  double sum = 0;
+  for(size_t i = 0; i < a.size(); i++) {
+    sum += pow(a[i]-b[i], 2);
+  }
+  return sqrt(sum);
+}
+
+//print all element in the vector
+//by seperating them between comma and adding parenthesis
+template <typename type>
+void SeperateInParenthesis(vector<type> & a) {
+  cout << "(" << a[0];
+  for(auto it = a.begin()+1; it != a.end(); ++it) {
+    cout << "," << *it;
+  }
+  cout << ")";
+}
+
+//given the function name, gamma, convergeDistance, maximum number of steps, starting point in "inputString"
+//calculate the local maximum(minimum) of the function
+//input: f is function "add" or "reduce", which decide whether it is "max" or "min"
+void grandient(string inputString,
+	       map<std::string, functionExpression *> & allFunctions, double (*f)(double, double)) {
+  inputString = inputString.substr(3);
+  StringSkipSpace(inputString);
+  int length = FindWordLength(inputString);
+  string fname = inputString.substr(0,length);
+  if (allFunctions.find(fname) == allFunctions.end()) {
+    cerr << "YOU DO NOT DEFINE THIS FUNCTION: " << fname << endl;
+    throw exception();
+  }
+  inputString = inputString.substr(length);
+  functionExpression * func = allFunctions[fname];
+  const char * inputChar = inputString.c_str();
+  vector<double> parameter;
+  scanparameter(&inputChar, parameter);
+  size_t dimension = func->getLength();
+  if( parameter.size() != dimension + 3) {
+    cerr << "YOU PARAMETERS NUMBER IS NOT MATCH" << endl;
+    throw exception();
+  }
+  double gamma = parameter[0];
+  double convergeddist = parameter[1];
+  double delta = convergeddist;
+  if(gamma < 0 || convergeddist < 0 || parameter[2] < 1) {
+    cerr << "gamma, converged distance, and num of trails should be positive, plz try again" << endl;
+    throw exception();
+  }
+  size_t max_iteration = (size_t)parameter[2];
+  vector<double> set(parameter.begin() + 3, parameter.end());
+  double old_value;
+  while(1) {
+    max_iteration--;
+    old_value = func->evaluateFromNumPara(set);
+    vector<double> new_set;
+    set[0] += delta;
+    double accend = (func->evaluateFromNumPara(set)-old_value) / delta *gamma;
+    new_set.push_back( f(set[0], accend) - delta );
+    for(size_t i = 1; i < dimension; i++) {
+      set[i] += delta;
+      set[i-1] -= delta;
+      double accend = (func->evaluateFromNumPara(set)-old_value) / delta *gamma;
+      new_set.push_back( f(set[i], accend) - delta );
+    }
+    set[dimension-1] -= delta;
+    if(dist(set, new_set) < convergeddist ||
+       max_iteration == 0) {
+      break;
+    }
+    set.swap(new_set);
+  }
+  if(max_iteration == 0) {
+    cout << "Do not converged but current ";
+  }
+  //create a vector named "parameter_str", which contain all the id of parameter.
+  vector<string> parameter_str;
+  vector<parameterExpression *> expr = func->getParas();
+  for(auto it = expr.begin(); it != expr.end(); ++it) {
+    parameter_str.push_back((*it)->getParaName());
+  }
+  cout << "Local maximun(minumum) is " << old_value << " when ";
+  SeperateInParenthesis<string>(parameter_str);
+  cout << " = ";
+  SeperateInParenthesis<double>(set);
+  cout << endl;
+  return;
+}
+
+double add(double a, double b) {
+  return a+b;
+}
+
+double reduce(double a, double b) {
+  return a-b;
+}
+
+void max(string inputString,
+	 map<std::string, functionExpression *> & allFunctions) {
+  cout << "MAX: ";
+  grandient(inputString, allFunctions, add);
+}
+
+void min(string inputString,
+	 map<std::string, functionExpression *> & allFunctions) {
+  cout << "MIN: ";
+  grandient(inputString,allFunctions, reduce);
+}
+
 // delete all the element after the pound-sign
 void passPound(string & inputString) {
   if( inputString.find_first_of("#") != string::npos ) {
     inputString.erase(inputString.find_first_of("#"));
-    cout << "size: " << inputString.length() << endl;
   }
 }
-
-
 int main(void) {
   map<std::string, functionExpression *> allFunctions;
 
@@ -451,11 +738,23 @@ int main(void) {
 	else if(inputString.substr(0, 4) == "test") {
 	  checkAnswer(inputString, allFunctions);
 	}
+	else if(inputString.substr(0, 6) == "numint") {
+	  Numint(inputString, allFunctions);
+	}
+	else if(inputString.substr(0, 5) == "mcint") {
+	  mcint(inputString, allFunctions);
+	}
+	else if(inputString.substr(0, 3) == "max") {
+	  max(inputString, allFunctions);
+	}
+	else if(inputString.substr(0, 3) == "min") {
+	  min(inputString, allFunctions);
+	}
 	else if (inputString.substr(0, 4) == "exit"){
 	    break;
 	}
 	else {
-	  cerr << "plz use keyword: define or test" << endl;
+	  cerr << "plz use keyword: define, test, numint, mcint, max, min" << endl;
 	}
       }
     catch(exception & e) {

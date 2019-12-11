@@ -73,6 +73,17 @@ class parameterExpression : public Expression
   
 };
 
+class numericExpression : public Expression
+{
+ private:
+  double numValue;
+ public:
+  numericExpression(double num) : numValue(num) {}
+  virtual ~numericExpression() {}
+  virtual double evaluate() const {
+    return numValue;
+  }
+};
 
 class functionExpression : public Expression
 {
@@ -89,6 +100,16 @@ class functionExpression : public Expression
     function(function) {}
   virtual double evaluate() const {
     return function->evaluate();
+  }
+  double evaluateFromNumPara(vector<double> & para) {
+    if(para.size() == parameters.size()) {
+      for(size_t i = 0; i < para.size(); i++) {
+	Expression * num = new numericExpression(para[i]);
+	parameters[i]->setMaterial(num);
+      }
+      return evaluate();
+    }
+    throw exception();
   }
   string getName() { return fname;}
   size_t getLength() { return parameters.size(); }
@@ -107,17 +128,7 @@ class functionExpression : public Expression
   }
 };
 
-class numericExpression : public Expression
-{
- private:
-  double numValue;
- public:
-  numericExpression(double num) : numValue(num) {}
-  virtual ~numericExpression() {}
-  virtual double evaluate() const {
-    return numValue;
-  }
-};
+
 
 
 class singleFunctionExpression : public Expression

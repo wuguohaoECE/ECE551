@@ -1,0 +1,15 @@
+#quadratic function
+define (f x) = (+ x 2)
+define (g x) = (- x 5)
+define (h x y) = (+ (^ (f x) 2) (^ (g y) 2) )
+min h 0.1 0.001 10000 0 0
+min h 0.01 0.001 100000 0 0
+min h 0.01 0.0001 100000 0 0 
+#not a continueous differentiable function, which may never converge
+define (abs x) = (select x x (- 0 x))
+min abs 0.1 0.001 10000 5
+define (abs1 x) = (select x x (- 0 x))
+define (A x y) = (* (abs x) (abs1 y))
+min A 0.1 0.001 10000 100 100
+
+

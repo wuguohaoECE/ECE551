@@ -1,0 +1,15 @@
+define (f x) = (+ x 2)
+numint f 0.01 -1 5
+mcint f 10000 -1 5
+define (g x) = (- x 5)
+define (h x y) = (+ (^ (f x) 2) (^ (g y) 2) )
+numint h 0.01 -3 1 1 4
+mcint h 10000 -3 1 1 4
+define (abs x) = (select x x (- 0 x))
+define (u x y) = (+ (abs (f x)) (abs (g y)))
+numint u 0.01 -4 0 4 6
+mcint u 10000 -4 0 4 6
+
+#incorrect expression
+numint f 0.01 -1 5 5
+numint f 0.01 5 -1

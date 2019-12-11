@@ -1,0 +1,7 @@
+define (f x) = (+ x 2)
+define (g x) = (- x 5)
+define (h x y) = (+ (^ (f x) 2) (^ (g y) 2) )
+define (abs x) = (select x x (- 0 x))
+define (m x y) = (- (- 0 (^ (f x) 2)) (^ (g y) 2))
+min abs 0.1 0.001 10000 5
+min h 0.1 0.001 10000 0 0
